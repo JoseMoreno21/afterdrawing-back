@@ -1,0 +1,95 @@
+import 'package:flutter/material.dart';
+void main() => runApp(const MyApp());
+class MyApp extends StatelessWidget
+{
+    const MyApp({Key? key}) : super(key: key);
+    @override
+    Widget build(BuildContext context)
+    {
+        return MaterialApp
+            (
+            home: Scaffold
+                (
+                appBar: AppBar(),
+                body: Stack
+                    (
+                    children: <Widget>
+                        [
+                        Container
+                            (
+                            alignment: Alignment(0.009688258171081543, -0.3403448462486267),
+                            child: Container
+                                (
+                                child: Image.asset('assets/images/Image.JPG'),
+                                height: 150.0,
+                                width: 150.0,
+                                ),
+                            ),
+                        Container
+                            (
+                            child: Align
+                                (
+                                alignment: Alignment(0.0011029243469238281, 0.146270751953125),
+                                child: Text
+                                    (
+                                    'Some text here',
+                                    style: TextStyle(),
+                                    )
+                                )
+                            ),
+                        Container
+                            (
+                            child: Align
+                                (
+                                alignment: Alignment(0.03613758087158203, 0.2583646774291992),
+                                child: Text
+                                    (
+                                    'Some text here',
+                                    style: TextStyle(),
+                                    )
+                                )
+                            ),
+                        Container
+                            (
+                            alignment: Alignment(-0.007025361061096191, 0.6569504737854004),
+                            padding: const EdgeInsets.all(10),
+                            child: TextButton
+                                (
+                                onPressed: ()
+                                {
+                                    //Do Something
+                                },
+                                child: const Text('Insert Text',),
+                                style: TextButton.styleFrom
+                                    (
+                                    primary: Colors.white,
+                                    backgroundColor: Colors.blue,
+                                    fixedSize: Size(120.0,40.0),
+                                    )
+                                )
+                            ),
+                        Container
+                            (
+                            alignment: Alignment(-0.00834810733795166, 0.8535680770874023),
+                            padding: const EdgeInsets.all(10),
+                            child: TextButton
+                                (
+                                onPressed: ()
+                                {
+                                    //Do Something
+                                },
+                                child: const Text('Insert Text',),
+                                style: TextButton.styleFrom
+                                    (
+                                    primary: Colors.white,
+                                    backgroundColor: Colors.blue,
+                                    fixedSize: Size(120.0,40.0),
+                                    )
+                                )
+                            ),
+                        ]
+                    )
+                )
+            );
+    }
+}
