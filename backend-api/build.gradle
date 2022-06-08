@@ -85,11 +85,21 @@ dependencies {
 
 }
 
-tasks.named('test') {
+/*tasks.named('test') {
     useJUnitPlatform()
+}*/
+
+task stage(dependsOn: ['build', 'clean'])
+build.mustRunAfter clean
+
+gradle.taskGraph.whenReady {
+  taskGraph ->
+    if (taskGraph.hasTask(stage)) {
+      test.enabled = false
+    }
 }
 
-azurewebapp {
+/*azurewebapp {
     subscription = '3fe83f92-c268-4ebc-b5e6-3fab53a6cdb6'
     resourceGroup = 'myappgroup'
     appName = 'afterdrawing'
@@ -100,4 +110,4 @@ azurewebapp {
         webContainer = 'Java SE'
         javaVersion = 'Java 11'
     }
-}
+}*/
